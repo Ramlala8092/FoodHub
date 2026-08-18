@@ -1,8 +1,12 @@
 import React from 'react'
 import { motion} from "motion/react";
 import { div } from 'motion/react-client';
+import {useCart} from "../context/CartContext";
+import {toast} from "react-toastify";
 
 const FoodCard = ({ food }) => {
+
+  const { addToCart } = useCart();
   return (
     <motion.div initial={{opacity:1, y:80, scale:0.9}} whileInView={{opacity:1, y:0, scale:1}} viewport={{once:true, amount:0.4}} transition={{duration:0.9, ease:"easeOut"}} whileHover={{ y:-10, scale:1.03}}  className='bg-white rounded-2xl shadow-md overflow-hidden  cursor-pointer'>
           <img src={food.image} alt={food.name} className='w-full h-48 object-cover' />
@@ -16,7 +20,7 @@ const FoodCard = ({ food }) => {
                   <span className='font-bold text-orange-500'>
                      &#8377;{food.price}
                   </span>
-                  <button className='bg-orange-500 text-white px-4 rounded-lg py-2'>Add +</button>
+                  <button  onClick={() => {addToCart(food); toast.success(`${food.name} added to cart!`)}} className='bg-orange-500 text-white px-4 rounded-lg py-2 active:bg-yellow-400 active:text-green-600'>Add +</button>
                 </div>
           </div>
     </motion.div>
@@ -24,3 +28,4 @@ const FoodCard = ({ food }) => {
 }
 
 export default FoodCard;
+

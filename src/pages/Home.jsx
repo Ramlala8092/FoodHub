@@ -5,9 +5,15 @@ import { div } from 'motion/react-client';
 import Footer from "../component/Footer"
 import HomeImage from "../Images/HomePage.jpg";
 import Video from "../Images/video.mp4";
+import {useCart} from "../context/CartContext";
 import { useNavigate } from "react-router-dom";
+import {toast} from "react-toastify";
+
+
 
 const Home = () => {
+  const { addToCart } = useCart();
+
   const navigate = useNavigate();
   const [restaurants,setRestaurants] = useState([]);
 
@@ -127,7 +133,7 @@ const Home = () => {
   return (
   <div>
     <section
-      className="relative w-full min-h-screen bg-cover bg-center"
+      className="relative mt-15 w-full min-h-screen bg-cover bg-center"
       style={{ backgroundImage: `url(${HomeImage})` }}
     >
       {/* Dark Overlay */}
@@ -286,7 +292,7 @@ const Home = () => {
                   ₹{food.price}
                 </h4>
 
-                <button className="bg-orange-500 hover:bg-orange-600 transition text-white px-4 py-2 rounded-xl font-semibold">
+                <button onClick={() => {addToCart(food); toast.success(`${food.name} added to cart!`)}}  className="bg-orange-500 hover:bg-orange-600 transition text-white px-4 py-2 rounded-xl font-semibold active:bg-yellow-500 active:text-green-600">
                   Add +
                 </button>
               </div>

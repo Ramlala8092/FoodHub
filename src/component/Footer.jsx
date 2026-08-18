@@ -36,7 +36,6 @@ const Footer = () => {
             <Link to="/" className="hover:text-orange-500 duration-300">Home</Link>
             <Link to="/shop" className="hover:text-orange-500 duration-300">Shop</Link>
             <Link to="/resturant" className="hover:text-orange-500 duration-300">Restaurant</Link>
-            <Link to="/offers" className="hover:text-orange-500 duration-300">Offers</Link>
             <Link to="/about" className="hover:text-orange-500 duration-300">About</Link>
             <Link to="/contact" className="hover:text-orange-500 duration-300">Contact</Link>
           </div>
@@ -61,12 +60,12 @@ const Footer = () => {
           <h2 className="text-xl font-semibold mb-5">Support</h2>
 
           <div className="flex flex-col gap-3 text-gray-400">
-            <p>Help Center</p>
-            <p>FAQs</p>
-            <p>Terms & Conditions</p>
-            <p>Privacy Policy</p>
-            <p>Return Policy</p>
-            <p>Email: support@foodhub.com</p>
+            <p className="hover:text-blue-700">Help Center</p>
+            <p className="hover:text-blue-700">FAQs</p>
+            <p className="hover:text-blue-700">Terms & Conditions</p>
+            <p className="hover:text-blue-700">Privacy Policy</p>
+            <p className="hover:text-blue-700">Return Policy</p>
+            <p className="hover:text-blue-700">Email: support@foodhub.com</p>
           </div>
         </div>
 

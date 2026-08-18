@@ -1,12 +1,12 @@
 import React from 'react'
 import Image from "../Images/AboutHero.jpg";
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const AboutHero = () => {
     const navigate = useNavigate();
 
   return (
-    <section className="max-w-7xl mx-auto xl:ml-25  relative h-[50vh] overflow-hidden mb-10 rounded-md">
+    <section className="max-w-7xl mt-21 mx-auto xl:ml-25  relative h-[50vh] overflow-hidden mb-10 rounded-md">
 
       <img
         src={Image}

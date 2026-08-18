@@ -9,9 +9,9 @@ import NotFoundPage from "./component/NotFoundPage";
 import Login from "./pages/auth/Login";
 import Signup from "./pages/auth/Signup";
 import Resturant from './pages/Resturant';
-import Offerrs from './pages/Offerrs';
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Profile from "./pages/auth/Profile";
 
 const Router = createBrowserRouter([
     {
@@ -42,6 +42,10 @@ const Router = createBrowserRouter([
             {
                 path: "/contact",
                 element: <Contact />,
+            },
+            {
+                path: "/cart",
+                element: <Cart />,
             }
         ]
     },
@@ -52,6 +56,10 @@ const Router = createBrowserRouter([
     {
         path: "/login",
         element: <Login />
+    },
+    {
+        path: "/profile",
+        element: <Profile />
     }
 ]);
 

@@ -6,9 +6,12 @@ import AboutFoodHub from "../Images/AboutFoodHub.jpg";
 import Footer from "../component/Footer";
 import { motion} from "motion/react";
 import { div } from 'motion/react-client';
+import { useNavigate } from "react-router-dom";
 
 
 const About = () => {
+
+  const navigate = useNavigate();
   return (
     <>
       <AboutHero />
@@ -42,7 +45,7 @@ const About = () => {
                 while providing an exceptional experience to our customers.
               </p>
 
-              <button  className="mt-8 bg-orange-500 hover:bg-orange-600 text-white px-7 py-3 rounded-full font-semibold transition duration-300 shadow-md hover:shadow-lg">
+              <button  className="mt-8 bg-orange-500 hover:bg-orange-600 text-white px-7 py-3 rounded-full font-semibold transition duration-300 shadow-md hover:shadow-lg" onClick={() => navigate("/shop")} >
                 Explore Food 🍕
               </button>
             </div>

@@ -4,8 +4,7 @@ import ContactIm from "../Images/ContactIm.jpg";
 
 const ContactHero = () => {
   return (
-   
-     <section className="relative w-full mb-10 max-w-7xl mx-auto h-[50vh] lg:h-[60vh] md:h-[40vh] rounded-xl overflow-hidden bg-cover bg-center" style={{backgroundImage: `url(${ContactIm})`}}>
+     <section className="relative w-full mb-10 max-w-7xl mx-auto h-[50vh] lg:h-[60vh] md:h-[40vh] rounded-none overflow-hidden bg-cover bg-center md:rounded-2xl lg:rounded-2xl mt-21" style={{backgroundImage: `url(${ContactIm})`}}>
             <div className="absolute inset-0 bg-black/50"></div>
             <div className=' relative z-10 px-6 py-5 mt-15 lg:mt-30'>
                 <h2 className='p-5 text-white font-bold text-4xl'>Contact Us</h2>

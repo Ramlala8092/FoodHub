@@ -1,5 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import Error from "../Images/Error.png";
 
 const NotFoundPage = () => {
     const navigate = useNavigate();
@@ -10,7 +11,7 @@ const NotFoundPage = () => {
   return (<div className='w-full h-screen '>
     <div className='w-full h-screen max-w-300 mx-auto flex items-center rounded-2xl'>
         <div className="order-1 w-130 h-130">
-            <img src={"/Error.png"} alt="404 error" className='w-120 h-90 mt-15'/>
+            <img src={Error} alt="404 error" className='w-120 h-90 mt-15'/>
         </div>
         <div className='order-2 h-120 pl-50'>
             <h2 className='text-9xl font-bold mt-2'>Oops!</h2>
